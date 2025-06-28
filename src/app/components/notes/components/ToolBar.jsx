@@ -11,8 +11,6 @@ import {
   AlignCenter,
   AlignLeft,
   AlignRight,
-  Highlighter,
-  Upload,
 } from "lucide-react";
 import { ListOrdered } from "lucide-react";
 
