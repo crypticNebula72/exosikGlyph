@@ -29,8 +29,8 @@ const Head = async() => {
         </div>
       )
       : (
-        <div className=''>
-
+        <div className='flex w-full flex-row justify-center h-full items-center gap-2'>
+          <Theme />
           <Link href={"/signin"} className='text-headerColor '>Sign In</Link>
         </div>
       )}
