@@ -98,7 +98,9 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-2 rounded-md">
-      {clientSecret && <PaymentElement />}
+      {clientSecret && (
+        <PaymentElement options={{ layout: 'tabs', paymentMethodOrder: ['card'] }} />
+      )}
 
       {errorMessage && <div>{errorMessage}</div>}
 
