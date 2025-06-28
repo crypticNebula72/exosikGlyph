@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import { useStripe, useElements, PaymentElement } from "@stripe/react-stripe-js";
 import convertToSubcurrency from "@/app/lib/convertToSubcurrency";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 import { getFirestore, doc, updateDoc } from "firebase/firestore";
 
 const CheckoutPage = ({ amount }: { amount: number }) => {
@@ -96,7 +97,7 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
           </svg>
           <h2 className="text-2xl font-bold text-headerColor mb-2">Sign In Required</h2>
           <p className="text-smallText mb-6 text-center">Please sign in to proceed to checkout and complete your purchase.</p>
-          <a href="/signin" className="px-6 py-2 bg-gradient-to-r from-proColor to-proFill text-buttonText rounded-lg font-semibold shadow transition text-lg">Sign In</a>
+          <Link href="/signin" className="px-6 py-2 bg-gradient-to-r from-proColor to-proFill text-buttonText rounded-lg font-semibold shadow transition text-lg">Sign In</Link>
         </div>
       </div>
     );
