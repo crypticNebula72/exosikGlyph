@@ -83,6 +83,25 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
     setLoading(false);
   };
 
+  if (!session) {
+    return (
+      <div className="flex items-center justify-center min-h-[350px]">
+        <div
+          className="bg-backgroundColor rounded-xl px-8 py-10 flex flex-col items-center max-w-md w-full border"
+          style={{ boxShadow: 'var(--box-shadow, 0 0px 20px rgba(27, 37, 89, 0.35), 0 0px 65px rgba(27, 37, 89, 0.25))' }}
+        >
+          <svg className="w-14 h-14 text-iconColorsFunctional mb-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="1.5" fill="none" />
+            <path d="M4 20c0-2.5 3.5-4.5 8-4.5s8 2 8 4.5" stroke="currentColor" strokeWidth="1.5" fill="none" />
+          </svg>
+          <h2 className="text-2xl font-bold text-headerColor mb-2">Sign In Required</h2>
+          <p className="text-smallText mb-6 text-center">Please sign in to proceed to checkout and complete your purchase.</p>
+          <a href="/signin" className="px-6 py-2 bg-gradient-to-r from-proColor to-proFill text-buttonText rounded-lg font-semibold shadow transition text-lg">Sign In</a>
+        </div>
+      </div>
+    );
+  }
+
   if (!clientSecret || !stripe || !elements) {
     return (
       <div className="flex items-center justify-center">
