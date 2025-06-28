@@ -149,7 +149,9 @@ const ChatInput = ({ id }: { id: string }) => {
                 {id === 'pragma' ? "Pragma" : "Tutor-AI"} can make mistakes.Please check important info.
             </p>
             <div className="w-full">
+            <Link href="/terms" className="hover:underline">
                 <p className="text-xs text-smallText font-medium tracking-wide text-end mt-2">Terms & Conditions</p>
+            </Link>
             </div>
         </div>
     );
