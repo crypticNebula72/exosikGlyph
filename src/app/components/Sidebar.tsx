@@ -38,7 +38,7 @@ const Sidebar = () => {
   );
 
   return (
-    <div className="z-50 h-full min-h-[100vh] fixed">
+    <div className="z-50 h-full min-h-[100vh] fixed bg-backgroundColor">
       <div className="flex flex-col h-full min-h-full ">
         {/* Sidebar Toggle Button */}
         <button
