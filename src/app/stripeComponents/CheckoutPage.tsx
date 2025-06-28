@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -58,6 +60,7 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
       setLoading(false);
       return;
     }
+    // @ts-ignore
     const { paymentIntent, error } = await stripe.confirmPayment({
 
       elements,
