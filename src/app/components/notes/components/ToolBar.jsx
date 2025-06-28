@@ -72,11 +72,6 @@ const ToolBar = ({ editor }) => {
       onClick: () => editor.chain().focus().toggleCodeBlock().run(),
       pressed: editor.isActive("code"),
     },
-    {
-      icon: <Highlighter className="size-4" />,
-      onClick: () => editor.chain().focus().toggleHighlight().run(),
-      pressed: editor.isActive("highlight"),
-    },
   ];
 
   return (
