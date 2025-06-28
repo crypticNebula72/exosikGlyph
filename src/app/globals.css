@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.light{
+  --headerColor: #1B2559;
+  --backgroundColor: #FFFFFF;
+  --chatBackgroundColor: #ededed;
+  --buttonBackgroundColor: #F5F5F5;
+  --littleLineBelowUser: #E9EDF7;
+  --chatButtonBorder: #c6c4cdd8;
+  --inputBorder: #e0e0e0;
+  --sideBarText: #1B2559;
+  --iconColorsFunctional: #718096;
+  --gradientButton: linear-gradient(45deg, #4A25E1, #7B5AFF);
+  --smallText: #718096;
+  --chatText: #000000;
+  --buttonText: #F2EFFF;
+  --iconColorsNonFunctional: #4318FF;
+  --proColor:#603CFF;
+  --proFill: #F2EFFF;
+  --proFillLight: #c6c4cdd8;
+  --box-shadow: 0 0px 20px rgba(27, 37, 89, 0.35), 0 0px 65px rgba(27, 37, 89, 0.25);
+  --box-shadow-bottom: 0 10px 20px rgba(27, 37, 89, 0.35), 0 20px 65px rgba(27, 37, 89, 0.25);
+}
+
+.dark{
+  --headerColor: #E0E0E0;
+  --backgroundColor: #1A1A1A;
+  --chatBackgroundColor: #242424;
+  --buttonBackgroundColor: #1F1F1F;
+  --littleLineBelowUser: #E9EDF7;
+  --chatButtonBorder: #E9EDF7;
+  --inputBorder: #e0e0e0;
+  --sideBarText: #E0E0E0;
+  --iconColorsFunctional: #718096;
+  --gradientButton: linear-gradient(45deg, #4A25E1, #7B5AFF);
+  --buttonText: #F2EFFF;
+  --smallText: #f2efffbb;
+  --chatText: #FFFFFF;
+  --iconColorsNonFunctional: #4318FF;
+  --proColor:#603CFF;
+  --proFill: #F2EFFF;
+  --proFillLight: #f2efffc0;
+  --box-shadow: 0 0px 20px rgba(255, 255, 255, 0.2), 0 0px 65px rgba(255, 255, 255, 0.01);
+  --box-shadow-bottom: 0 10px 20px rgba(255, 255, 255, 0.35), 0 20px 65px rgba(255, 255, 255, 0.01);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--iconColorsFunctional);
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--smallText);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
