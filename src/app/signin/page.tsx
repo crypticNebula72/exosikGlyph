@@ -3,7 +3,6 @@ import React from 'react'
 import { Metadata } from 'next'
 import { auth, signIn } from '@/auth'
 import { FcGoogle } from 'react-icons/fc'
-import { FaGithub } from 'react-icons/fa'
 import { redirect } from 'next/navigation'
 import { db } from '@/firebase' // Import Firestore DB
 import { doc, getDoc, setDoc } from 'firebase/firestore'
@@ -59,18 +58,6 @@ const SignInPage = async () => {
                                 className='border-[1px] p-2 px-4 rounded-md flex items-center gap-2'>
                                 <FcGoogle />
                                 Sign in with Google
-                            </button>
-                        </form>
-                        <form
-                            action={async () => {
-                                "use server"
-                                await signIn("github")
-                            }}
-                        >
-                            <button type="submit"
-                                className='border-[1px] p-2 px-4 rounded-md flex items-center gap-2'>
-                                <FaGithub />
-                                Sign in with Github
                             </button>
                         </form>
                     </div>
